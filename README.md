@@ -1,6 +1,6 @@
 # Filer Quest
 
-<img src="https://github.com/NebulaStack-prog/Tetro-Rally/raw/main/FQ.png" width="200" height="230">
+<img src="https://github.com/NebulaStack-prog/Filer-Quest/raw/main/FQ.jpg" width="200" height="230">
 
 > Navigate, hack, fix – master Linux commands through filesystem quests.
 

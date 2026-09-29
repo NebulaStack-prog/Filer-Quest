@@ -1,347 +1,347 @@
-## Часть 1. Основной документ.
+## Part 1. Main Document.
 
-### 1. Заголовок и базовая информация.
+### 1. Title and Basic Information.
 
-• **Название:** Filer Quest
+• **Name:** Filer Quest
 
-• **Назначение:** Проект № 18. Продукт.
+• **Purpose:** Project No. 18. Product.
 
-• **Фаза проекта:** Phase II.
+• **Project Phase:** Phase II.
 
-• **Технологический стек:** Python (стандартные библиотеки, работа с терминалом через ANSI-цвета).
+• **Technology Stack:** Python (standard libraries, terminal interaction using ANSI colors).
 
-• **Статус проекта:** Полностью завершен.
+• **Project Status:** Fully completed.
 
-### 2. Краткое описание проекта.
+### 2. Project Overview.
 
-**Filer Quest** – это обучающая консольная игра-квест, созданная на языке Python и предназначенная для освоения базовых команд файловой системы Linux в игровой форме.
+**Filer Quest** is an educational console quest game written in Python and designed to teach the basic Linux file system commands in a game-based format.
 
-Игрок проходит последовательность из 9 квестов, каждый из которых знакомит с новой командой: pwd, ls, cd, cat, mkdir, touch, mv, grep и другими.
+The player completes a sequence of 9 quests, each introducing a new command: pwd, ls, cd, cat, mkdir, touch, mv, grep, and others.
 
-Все действия выполняются в изолированной «песочнице» (fs_sandbox), что делает игру полностью безопасной — реальная файловая система не затрагивается.
+All operations are performed inside an isolated "sandbox" (fs_sandbox), making the game completely safe — the real file system is never affected.
 
-Приложение использует цветной вывод в терминал (ANSI-escape-последовательности) для создания дружелюбного и визуально понятного интерфейса.
+The application uses colored terminal output (ANSI escape sequences) to create a friendly and visually clear interface.
 
-Проект представляет собой полностью функциональную обучающую игру с продуманной системой квестов, проверкой условий и защитой от выхода за пределы песочницы.
+The project is a fully functional educational game with a structured quest system, condition checking, and protection against escaping the sandbox.
 
-### 3. Четкие цели проекта.
+### 3. Clear Project Goals.
 
-• Создать обучающую игру-квест для изучения команд файловой системы Linux.
+• Create an educational quest game for learning Linux file system commands.
 
-• Реализовать безопасную изолированную песочницу для выполнения файловых операций.
+• Implement a secure isolated sandbox for performing file operations.
 
-• Реализовать систему из 9 последовательных квестов с проверкой их выполнения.
+• Implement a system of 9 sequential quests with completion checks.
 
-• Обеспечить поддержку основных команд: pwd, ls, cd, mkdir, touch, rm, cp, mv, cat, grep.
+• Provide support for the main commands: pwd, ls, cd, mkdir, touch, rm, cp, mv, cat, grep.
 
-• Реализовать эмуляцию командной строки с текущей директорией (cwd) и обработкой ввода.
+• Implement command-line emulation with a current working directory (cwd) and input handling.
 
-• Реализовать цветной вывод через ANSI-цвета для улучшения восприятия информации.
+• Implement colored output using ANSI colors to improve information readability.
 
-• Обеспечить защиту от выхода за пределы песочницы (SANDBOX_ROOT).
+• Prevent the player from escaping the sandbox (SANDBOX_ROOT).
 
-• Реализовать систему подсказок (help, hint) для помощи игроку.
+• Implement a hint system (help, hint) to assist the player.
 
-• Продемонстрировать подход к разработке обучающих консольных приложений на Python.
+• Demonstrate an approach to developing educational console applications in Python.
 
-### 4. Компоненты проекта.
+### 4. Project Components.
 
-Проект состоит из одного исполняемого файла, который включает в себя все компоненты:
+The project consists of a single executable file that contains all components:
 
-• **filer_quest.py** – основной скрипт, содержащий весь код игры: класс цветов, функции вывода, логику песочницы, систему квестов, обработчик команд и игровой цикл.
+• **filer_quest.py** – the main script containing all game code: the color class, output functions, sandbox logic, quest system, command handler, and game loop.
 
-• **fs_sandbox/** – директория песочницы, создаваемая автоматически при запуске игры (содержит поддиректории home, var, etc, tmp и стартовые файлы).
+• **fs_sandbox/** – the sandbox directory, created automatically when the game starts (contains the home, var, etc, tmp subdirectories and initial files).
 
-### 5. Инструкция по использованию.
+### 5. Usage Instructions.
 
-- **5.1. Запуск:**
+* **5.1. Launch:**
 
-• Дополнительные библиотеки не требуются — используются только стандартные модули Python (os, shutil, pathlib).
+• No additional libraries are required — only standard Python modules (os, shutil, pathlib) are used.
 
-• Запустите скрипт с помощью Python (например, с помощью PyCharm или терминала).
+• Run the script using Python (for example, from PyCharm or a terminal).
 
-- **5.2. Цель игры:**
+* **5.2. Game Objective:**
 
-• Пройти последовательно все 9 квестов, каждый из которых обучает новой команде Linux.
+• Complete all 9 quests in sequence, with each quest teaching a new Linux command.
 
-• Каждый квест содержит описание, ожидаемую команду и проверку выполнения.
+• Each quest contains a description, an expected command, and a completion check.
 
-• После успешного выполнения квеста игрок переходит к следующему.
+• After successfully completing a quest, the player proceeds to the next one.
 
-- **5.3. Управление:**
+* **5.3. Controls:**
 
-• **Ввод команд:** игрок вводит команды в командной строке приглашения ($).
+• **Command input:** the player enters commands at the command prompt ($).
 
-• **Enter:** подтверждение ввода команды.
+• **Enter:** confirms the command input.
 
-• **Enter после успеха:** переход к следующему квесту.
+• **Enter after success:** proceeds to the next quest.
 
-• **exit:** выход из игры в любой момент.
+• **exit:** exits the game at any time.
 
-• **help:** вывод списка доступных команд.
+• **help:** displays the list of available commands.
 
-• **hint:** вывод подсказки по текущему заданию.
+• **hint:** displays a hint for the current task.
 
-- **5.4. Поддерживаемые команды:**
+* **5.4. Supported Commands:**
 
-• pwd – показать текущий путь.
+• pwd – show the current path.
 
-• ls – показать содержимое текущей директории.
+• ls – show the contents of the current directory.
 
-• cd <путь> – перейти в директорию (поддерживаются .., ~, абсолютные и относительные пути).
+• cd <path> – navigate to a directory (supports .., ~, absolute and relative paths).
 
-• mkdir <имя> – создать директорию.
+• mkdir <name> – create a directory.
 
-• touch <имя> – создать файл.
+• touch <name> – create a file.
 
-• rm <имя> – удалить файл.
+• rm <name> – delete a file.
 
-• cp <откуда> <куда> – копировать файл.
+• cp <source> <destination> – copy a file.
 
-• mv <откуда> <куда> – переместить файл.
+• mv <source> <destination> – move a file.
 
-• cat <имя> – прочитать содержимое файла.
+• cat <name> – read the contents of a file.
 
-• grep <слово> <файл> – найти строки с указанным словом.
+• grep <word> <file> – find lines containing the specified word.
 
-• help – список команд.
+• help – list available commands.
 
-• hint – подсказка.
+• hint – display a hint.
 
-• exit – выход.
+• exit – exit the game.
 
-- **5.5. Интерфейс:**
+* **5.5. Interface:**
 
-• Цветной вывод через ANSI-escape-последовательности:
+• Colored output using ANSI escape sequences:
 
-- зеленый – приглашение командной строки
+* green – command prompt
 
-- красный – ошибки
+* red – errors
 
-- желтый – заголовки
+* yellow – headers
 
-- синий – названия квестов
+* blue – quest titles
 
-- циан – рамки сообщений
+* cyan – message borders
 
-- жирный – акценты
+* bold – emphasis
 
-• Рамки (print_box) для выделения важных сообщений.
+• Frames (print_box) for highlighting important messages.
 
-• Заголовок с названием игры, автоматически очищающий экран.
+• A title displaying the game name and automatically clearing the screen.
 
-• Отображение текущей директории перед вводом команды.
+• The current directory displayed before entering a command.
 
-• Прогресс: отображение номера текущего квеста (Квест N/9).
+• Progress: displays the current quest number (Quest N/9).
 
-**5.6. Система квестов:**
+**5.6. Quest System:**
 
-• **Квест 1:** pwd — узнать текущий путь.
+• **Quest 1:** pwd — find the current path.
 
-• **Квест 2:** ls — посмотреть содержимое директории.
+• **Quest 2:** ls — view the contents of the directory.
 
-• **Квест 3:** cd home — перейти в домашнюю директорию.
+• **Quest 3:** cd home — navigate to the home directory.
 
-• **Квест 4:** cat readme.txt — прочитать инструкцию.
+• **Quest 4:** cat readme.txt — read the instructions.
 
-• **Квест 5:** mkdir projects — создать папку для проектов.
+• **Quest 5:** mkdir projects — create a projects directory.
 
-• **Квест 6:** touch projects/note.txt — создать файл заметки.
+• **Quest 6:** touch projects/note.txt — create a note file.
 
-• **Квест 7:** cat secret.key — найти секретный ключ.
+• **Quest 7:** cat secret.key — find the secret key.
 
-• **Квест 8:** mv var/log.txt home/ — переместить лог-файл.
+• **Quest 8:** mv var/log.txt home/ — move the log file.
 
-• **Квест 9:** grep ошибка home/log.txt — найти строку с ошибкой.
+• **Quest 9:** grep error home/log.txt — find the line containing the error.
 
-## Часть 2. Технический документ.
+## Part 2. Technical Document.
 
-### 1. Цели разработки.
+### 1. Development Goals.
 
-• Основной целью разработки было создание обучающего консольного приложения для изучения базовых команд файловой системы Linux в игровой форме.
+• The primary goal of the project was to create an educational console application for learning the basic Linux file system commands in a game-based format.
 
-• Дополнительно проект направлен на изучение работы с файловой системой через модули pathlib, os и shutil, а также на освоение цветного вывода в терминал через ANSI-escape-последовательности.
+• Additionally, the project focuses on learning how to work with the file system using the pathlib, os, and shutil modules, as well as learning how to implement colored terminal output using ANSI escape sequences.
 
-• Задачи включали: реализацию безопасной песочницы, эмуляцию командной строки, систему квестов с проверками и защиту от выхода за пределы рабочей директории.
+• The tasks included implementing a secure sandbox, command-line emulation, a quest system with completion checks, and protection against escaping the working directory.
 
-### 2. Использованные технологии.
+### 2. Technologies Used.
 
-• **Язык программирования:** Python
+• **Programming Language:** Python
 
-• **Стандартные библиотеки:**
+• **Standard Libraries:**
 
-- os – для очистки экрана и определения ОС.
+* os – for clearing the screen and detecting the operating system.
 
-- shutil – для рекурсивного удаления и копирования файлов.
+* shutil – for recursively deleting and copying files.
 
-- pathlib – для удобной работы с путями (Path).
+* pathlib – for convenient path handling (Path).
 
-- ANSI-escape-последовательности для цветного вывода в терминал (класс Colors).
+* ANSI escape sequences for colored terminal output (Colors class).
 
-### 3. Архитектура проекта.
+### 3. Project Architecture.
 
-• Проект реализован как монолитное консольное приложение с игровым циклом.
+• The project is implemented as a monolithic console application with a game loop.
 
-• Основной цикл: while level < len(QUESTS): — проходит по всем квестам последовательно.
+• Main loop: while level < len(QUESTS): — iterates through all quests sequentially.
 
-• Логика разделена на функциональные блоки:
+• The logic is divided into functional blocks:
 
-• Инициализация и настройка (setup_sandbox, clear_screen, print_box, print_header).
+• Initialization and configuration (setup_sandbox, clear_screen, print_box, print_header).
 
-• Обработчик команд (run_command).
+• Command handler (run_command).
 
-• Система квестов (список QUESTS).
+• Quest system (QUESTS list).
 
-• Игровой цикл (play).
+• Game loop (play).
 
-• В каждом квесте выполняется: вывод задания, ожидание ввода, обработка команды, проверка условия, переход к следующему квесту.
+• Each quest follows the same process: display the task, wait for input, process the command, check the condition, and proceed to the next quest.
 
-### 4. Структура проекта.
+### 4. Project Structure.
 
-• **Инициализация:** определение класса Colors, функций вывода (clear_screen, print_box, print_header) и константы SANDBOX_ROOT.
+• **Initialization:** definition of the Colors class, output functions (clear_screen, print_box, print_header), and the SANDBOX_ROOT constant.
 
-• **Глобальные переменные:** SANDBOX_ROOT (путь к песочнице), read_files (множество прочитанных файлов), QUESTS (список квестов).
+• **Global Variables:** SANDBOX_ROOT (path to the sandbox), read_files (set of files that have been read), QUESTS (list of quests).
 
-• **Функции настройки:**
+• **Setup Functions:**
 
-- setup_sandbox() – создание песочницы с начальной структурой.
+* setup_sandbox() – creates the sandbox with its initial structure.
 
-- get_current_path(cwd) – получение относительного пути.
+* get_current_path(cwd) – returns the relative path.
 
-• **Функции вывода:**
+• **Output Functions:**
 
-- clear_screen() – очистка экрана.
+* clear_screen() – clears the screen.
 
-- print_box(text, color) – вывод текста в рамке.
+* print_box(text, color) – displays text inside a frame.
 
-- print_header() – вывод заголовка игры.
+* print_header() – displays the game header.
 
-• **Обработчик команд:**
+• **Command Handler:**
 
-- run_command(cmd, cwd) – основной диспетчер команд, возвращает кортеж (ok, msg, new_cwd).
+* run_command(cmd, cwd) – the main command dispatcher, returning a tuple (ok, msg, new_cwd).
 
-• **Игровой цикл:**
+• **Game Loop:**
 
-- play() – основной игровой цикл.
+* play() – the main game loop.
 
-- Точка входа: if __name__ == "__main__": – запуск игры.
+* Entry point: if **name** == "**main**": – starts the game.
 
-### 5. Ключевые компоненты системы.
+### 5. Key System Components.
 
-• **Песочница (SANDBOX_ROOT):** Изолированная директория ./fs_sandbox, создаваемая при запуске. Содержит поддиректории home, var, etc, tmp и стартовые файлы (readme.txt, log.txt, config.ini, draft.txt, secret.key, backup.tar).
+• **Sandbox (SANDBOX_ROOT):** An isolated ./fs_sandbox directory created at startup. It contains the home, var, etc, and tmp subdirectories, as well as initial files (readme.txt, log.txt, config.ini, draft.txt, secret.key, backup.tar).
 
-• **Система квестов (QUESTS):** Список словарей, каждый из которых содержит:
+• **Quest System (QUESTS):** A list of dictionaries, each containing:
 
-- id – номер квеста.
+* id – quest number.
 
-- title – заголовок.
+* title – title.
 
-- description – описание задания.
+* description – task description.
 
-- expected_cmd – ожидаемая команда (для справки).
+* expected_cmd – expected command (for reference).
 
-- check – лямбда-функция проверки выполнения.
+* check – lambda function used to check completion.
 
-- success – сообщение об успехе.
+* success – success message.
 
-• **Обработчик команд (run_command):** Диспетчер команд с использованием цепочки if/elif. Возвращает кортеж (успех, сообщение, новая_директория).
+• **Command Handler (run_command):** A command dispatcher implemented using an if/elif chain. Returns a tuple (success, message, new_directory).
 
-• **Отслеживание прочитанных файлов (read_files):** Множество строк с абсолютными путями к файлам, которые игрок прочитал через cat или grep.
+• **Read File Tracking (read_files):** A set of strings containing absolute paths to files that the player has read using cat or grep.
 
-• **Цветной вывод:** Класс Colors с ANSI-кодами для разных цветов и стилей.
+• **Colored Output:** The Colors class containing ANSI codes for different colors and styles.
 
-• **Защита песочницы:** Проверка new_cwd.relative_to(SANDBOX_ROOT) не позволяет выйти за пределы рабочей директории.
+• **Sandbox Protection:** The new_cwd.relative_to(SANDBOX_ROOT) check prevents the player from escaping the working directory.
 
-### 6. Реализация пользовательского интерфейса.
+### 6. User Interface Implementation.
 
-• Интерфейс полностью реализован средствами стандартного терминала.
+• The interface is fully implemented using standard terminal capabilities.
 
-• Основные элементы: приглашение командной строки ($), рамки для сообщений, цветной текст, заголовок с очисткой экрана.
+• Main elements: command prompt ($), message frames, colored text, and a header with automatic screen clearing.
 
-• Вывод выполняется через print() с ANSI-кодами.
+• Output is handled using print() with ANSI codes.
 
-• Ввод осуществляется через input().
+• Input is handled using input().
 
-### 7. Процесс разработки.
+### 7. Development Process.
 
-Разработка велась поэтапно:
+Development was carried out in several stages:
 
-• создание класса Colors и функций цветного вывода;
+• creation of the Colors class and colored output functions;
 
-• реализация очистки экрана и заголовка;
+• implementation of screen clearing and the header;
 
-• создание песочницы с начальной структурой;
+• creation of the sandbox with its initial structure;
 
-• разработка обработчика команд (run_command);
+• development of the command handler (run_command);
 
-• реализация базовых команд: pwd, ls, cd;
+• implementation of the basic commands: pwd, ls, cd;
 
-• добавление команд работы с файлами: mkdir, touch, rm, cat;
+• addition of file-related commands: mkdir, touch, rm, cat;
 
-• добавление команд cp, mv, grep;
+• addition of cp, mv, grep;
 
-• реализация системы защиты песочницы;
+• implementation of sandbox protection;
 
-• разработка списка квестов (QUESTS) с проверками;
+• development of the quest list (QUESTS) with completion checks;
 
-• реализация игрового цикла (play) с переходами между квестами;
+• implementation of the game loop (play) with transitions between quests;
 
-• добавление системы подсказок (help, hint).
+• addition of the hint system (help, hint).
 
-### 8. Основные сложности и способы их решения.
+### 8. Main Challenges and Solutions.
 
-• **(1) Сложность:** безопасное выполнение файловых операций без риска для реальной системы.
+• **(1) Challenge:** performing file operations safely without risking the real system.
 
-**Решение:** создание изолированной песочницы SANDBOX_ROOT и проверка relative_to() для всех путей.
+**Solution:** creating an isolated SANDBOX_ROOT sandbox and using relative_to() checks for all paths.
 
-• **(2) Сложность:** корректная обработка относительных и абсолютных путей в cd.**Решение:** поддержка .., ~, путей, начинающихся с /, и относительных путей через Path.resolve().
+• **(2) Challenge:** correctly handling relative and absolute paths in cd.**Solution:** supporting .., ~, paths starting with /, and relative paths using Path.resolve().
 
-• **(3) Сложность:** проверка выполнения квестов без жесткой привязки к вводу.
+• **(3) Challenge:** checking quest completion without relying strictly on the entered command.
 
-**Решение:** использование лямбда-функций check(cwd, files), которые проверяют состояние файловой системы, а не введенную команду.
+**Solution:** using lambda functions check(cwd, files) that check the state of the file system rather than the command entered by the player.
 
-• **(4) Сложность:** отслеживание того, что игрок действительно прочитал файл.
+• **(4) Challenge:** tracking whether the player actually read a file.
 
-**Решение:** множество read_files, в которое добавляются пути при выполнении cat и grep.
+**Solution:** using the read_files set, which stores paths when cat or grep is executed.
 
-• **(5) Сложность:** цветной вывод в разных операционных системах.
+• **(5) Challenge:** implementing colored output across different operating systems.
 
-**Решение:** использование ANSI-escape-последовательностей (поддерживаются в современных терминалах Windows, Linux и macOS).
+**Solution:** using ANSI escape sequences (supported by modern Windows, Linux, and macOS terminals).
 
-• **(6) Сложность:** обработка ошибок при работе с файлами.
+• **(6) Challenge:** handling errors during file operations.
 
-**Решение:** оборачивание логики run_command в блок try/except с возвратом понятного сообщения об ошибке.
+**Solution:** wrapping the run_command logic in a try/except block and returning a clear error message.
 
-### 9. Текущие ограничения проекта.
+### 9. Current Project Limitations.
 
-• Отсутствие сохранения прогресса между запусками.
+• No progress saving between launches.
 
-• Нет системы очков или рейтинга.
+• No scoring or ranking system.
 
-• Ограниченный набор команд (только базовые).
+• Limited set of commands (basic commands only).
 
-• Нет поддержки прав доступа (chmod, chown).
+• No support for file permissions (chmod, chown).
 
-• Нет интерактивных подсказок во время ввода (автодополнение).
+• No interactive hints while entering commands (autocomplete).
 
-• Код остается монолитным (без разделения на модули).
+• The code remains monolithic (not separated into modules).
 
-• Нет поддержки других оболочек (bash, zsh) — только эмуляция.
+• No support for other shells (bash, zsh) — emulation only.
 
-### 10. Возможные улучшения и планы развития.
+### 10. Potential Improvements and Future Development.
 
-• Рефакторинг кода (разделение на модули: commands.py, quests.py, ui.py).
+• Refactoring the code (splitting it into modules: commands.py, quests.py, ui.py).
 
-• Добавление сохранения прогресса в JSON-файл.
+• Adding progress saving to a JSON file.
 
-• Расширение списка квестов (права доступа, архивы, поиск find).
+• Expanding the quest list (file permissions, archives, find search).
 
-• Добавление системы очков и таблицы лидеров.
+• Adding a scoring system and leaderboard.
 
-• Реализация интерактивной справки (man-подобной).
+• Implementing interactive documentation (man-like).
 
-• Добавление автодополнения команд по Tab.
+• Adding Tab command autocomplete.
 
-• Поддержка нескольких уровней сложности.
+• Supporting multiple difficulty levels.
 
-• Добавление режима «свободной песочницы» без квестов.
+• Adding a "free sandbox" mode without quests.

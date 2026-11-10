@@ -7,7 +7,7 @@
 ## 💻 Project Run
 - Open with Python: [FilerQuest.py](FilerQuest.py)
   
-- Or download exe: [FilerQuest.exe](https://github.com/NebulaStack-prog/Calculator-v.1/releases/tag/v1.0)
+- Or download exe: [FilerQuest.exe](https://github.com/NebulaStack-prog/Filer-Quest/releases/tag/v1.0.0)
 
 ## 📄 Full Documentation
 - 🇷🇺  Russian version: [Documentation](FQ_RU.md)

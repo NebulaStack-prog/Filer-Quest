@@ -1,31 +1,78 @@
 # Filer Quest
 
-<img src="https://github.com/NebulaStack-prog/Filer-Quest/raw/main/FQ.jpg" width="200" height="230">
+<img src="FQ.jpg" width="200" alt="Filer Quest emblem">
 
-> Navigate, hack, fix – master Linux commands through filesystem quests.
+> Learn Linux-style commands through virtual filesystem quests.
 
-## 💻 Project Run
-- Open with Python: [FilerQuest-New.py](FilerQuest-New.py)
-  
-- Or download exe: [FilerQuest.exe](https://github.com/NebulaStack-prog/Filer-Quest/releases/tag/v1.0.0)
+| Project Information | Details |
+|---|---|
+| Project ID | NS-018 |
+| Direction | Infotech |
+| Development Phase | Phase II |
+| Version | v2.0 |
+| Platform | Windows / Python |
+| Status | Completed |
 
-- Or use old Python code: [FilerQuest.py](FilerQuest.py)
+> [![CI](https://github.com/NebulaStack-prog/Filer-Quest/actions/workflows/ci.yml/badge.svg)](https://github.com/NebulaStack-prog/Filer-Quest/actions/workflows/ci.yml)
 
-## 📄 Full Documentation
-- 🇷🇺  Russian version: [Documentation](FQ_RU.md)
-  
-- 🇺🇲  English version: [Documentation](FQ_EN.md)
-  
+## 📖 Overview
+
+Filer Quest is an educational terminal simulator for practicing basic filesystem operations in a virtual environment. The updated implementation offers 25 quests and a free practice mode without executing real shell commands.
+
+## ✨ Features
+
+- 25 interactive quests with hints
+
+- Virtual filesystem navigation and file management
+
+- Free practice mode
+
+- Persistent local progress
+
+- Input validation and virtual path handling
+
+## 🛠 Technology Stack
+
+- Python
+- JSON
+- Python standard library
+
+## 📦 Installation
+
+- Download EXE from Releases: [more...](https://github.com/NebulaStack-prog/Filer-Quest/releases/tag/v2.0)
+
+- Or run with Python: [more...](FilerQuest-New.py)
+
+- Original source code (Old): [more...](FilerQuest.py)
+
+## 📄 Documentation
+
+- Russian documentation: [more...](FQ_RU.md)
+
+- English documentation: [more...](FQ_EN.md)
+
+## 📊 Project Status
+
+A completed NESTIMS Phase II project. Both the original and updated Python implementations are preserved.
+
 ## 📷 Screenshots
-![](FQ_1.png)
-![](FQ_2.png)
-![](FQ_3.png)
-![](FQ_4.png)
-![](FQ_5.png)
-![](FQ_6.png)
-![](FQ_7.png)
-![](FQ_8.png)
-![](FQ_9.png)
-![](FQ_10.png)
+
+![Screenshot 1](FQ_1.png)
+
+![Screenshot 2](FQ_2.png)
+
+![Screenshot 3](FQ_3.png)
+
+![Screenshot 4](FQ_4.png)
+
+![Screenshot 5](FQ_5.png)
+
+![Screenshot 6](FQ_6.png)
+
+![Screenshot 7](FQ_7.png)
+
+![Screenshot 9](FQ_9.png)
+
+![Screenshot 10](FQ_10.png)
 
 © NESTIMS

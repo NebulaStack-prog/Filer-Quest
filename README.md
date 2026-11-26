@@ -5,9 +5,11 @@
 > Navigate, hack, fix – master Linux commands through filesystem quests.
 
 ## 💻 Project Run
-- Open with Python: [FilerQuest.py](FilerQuest.py)
+- Open with Python: [FilerQuest-New.py](FilerQuest-New.py)
   
 - Or download exe: [FilerQuest.exe](https://github.com/NebulaStack-prog/Filer-Quest/releases/tag/v1.0.0)
+
+- Or use old Python code: [FilerQuest.py](FilerQuest.py)
 
 ## 📄 Full Documentation
 - 🇷🇺  Russian version: [Documentation](FQ_RU.md)

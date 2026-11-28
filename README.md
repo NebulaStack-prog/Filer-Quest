@@ -39,13 +39,13 @@ Filer Quest is an educational terminal simulator for practicing basic filesystem
 
 ## 📦 Installation
 
-- Download EXE from Releases: [more...](https://github.com/NebulaStack-prog/Filer-Quest/releases/tag/v2.0)
+- Download the Windows executable from Releases: [more...](https://github.com/NebulaStack-prog/Filer-Quest/releases/tag/v2.0)
 
-- Or run with Python: [more...](FilerQuest-New.py)
+- Or run with Python latest version of code: [more...](FilerQuest-New.py)
 
 - Original source code (Old): [more...](FilerQuest.py)
 
-## 📄 Documentation
+## 📄 Documentation (For old code)
 
 - Russian documentation: [more...](FQ_RU.md)
 
